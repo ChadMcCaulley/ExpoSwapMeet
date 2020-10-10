@@ -21,6 +21,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "A place to buy and sell goods, chat, and designate meeting locations for physical trades.",
+    "githubUrl": "https://github.com/ChadMcCaulley/ExpoSwapMeet"
   }
 }
