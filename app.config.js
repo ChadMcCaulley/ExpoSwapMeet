@@ -1,4 +1,4 @@
-{
+export default {
   "expo": {
     "name": "SwapMeet",
     "slug": "SwapMeet",
@@ -16,8 +16,25 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "android": {
+      "permissions": ["expo-location"],
+      "config": {
+        "googleMaps": {
+            "apiKey": process.env.GOOGLE_MAPS_API_KEY
+        }
+      }
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ]
+      },
+      "config": {
+        "googleMapsApiKey": process.env.GOOGLE_MAPS_API_KEY
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
