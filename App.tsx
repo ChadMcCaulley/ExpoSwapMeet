@@ -1,13 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import MapView from 'react-native-maps';
+import { StyleSheet, SafeAreaView, Dimensions  } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello World</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <MapView style={styles.mapStyle} />
+    </SafeAreaView>
   );
 }
 
@@ -18,4 +17,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  mapStyle: {
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
+  }
 });
