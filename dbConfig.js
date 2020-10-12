@@ -1,4 +1,7 @@
-export const firebaseConfig = {
+import * as firebase from 'firebase'
+import firestore from 'firebase/firestore'
+
+const firebaseConfig = {
   apiKey: "AIzaSyAtMh9AVKbV9eSl9n3uMA9IhkyDktDjwBw",
   authDomain: "swapmeet-4848e.firebaseapp.com",
   databaseURL: "https://swapmeet-4848e.firebaseio.com",
@@ -8,3 +11,8 @@ export const firebaseConfig = {
   appId: "1:846829359468:web:472b5631eac2948ad22349",
   measurementId: "G-32LDMXMXEY"
 }
+
+firebase.initializeApp(firebaseConfig);
+firebase.firestore()
+
+export default firebase

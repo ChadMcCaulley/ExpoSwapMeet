@@ -1,14 +1,12 @@
-import React, { useState } from 'react'
-import { StyleSheet, View, Text  } from 'react-native'
+import React, { useState, useEffect } from 'react'
+import { StyleSheet, View, Text, Button  } from 'react-native'
 import AppStyles from '../AppStyles'
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
+
   return (
     <View style={AppStyles.container}>
-      <Text> Login Screen </Text>
+      <Button title="Google" />
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-});

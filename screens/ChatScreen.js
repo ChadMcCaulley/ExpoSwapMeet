@@ -2,8 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { StyleSheet, View, TextInput, Button  } from 'react-native';
 import { GiftedChat } from 'react-native-gifted-chat'
 import AsyncStorage from '@react-native-community/async-storage'
-import * as firebase from 'firebase'
-import 'firebase/firestore'
+import firebase from '../dbConfig'
 import AppStyles from '../AppStyles'
 
 const db = firebase.firestore()
@@ -13,7 +12,6 @@ export default function ChatScreen() {
   const [user, setUser] = useState(null)
   const [name, setName] = useState(null)
   const [messages, setMessages] = useState([])
-
   useEffect(() => {
     readUser()
     const unsubscribe = chatsRef.onSnapshot(querySnapShot => {
