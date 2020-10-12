@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { StyleSheet, View, TextInput, Button  } from 'react-native';
 import { GiftedChat } from 'react-native-gifted-chat'
 import AsyncStorage from '@react-native-community/async-storage'
+import * as firebase from 'firebase'
 import 'firebase/firestore'
 import AppStyles from '../AppStyles'
 
