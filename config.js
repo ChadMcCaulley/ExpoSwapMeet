@@ -1,4 +1,4 @@
-export default {
+export const firebaseConfig = {
   apiKey: "AIzaSyAtMh9AVKbV9eSl9n3uMA9IhkyDktDjwBw",
   authDomain: "swapmeet-4848e.firebaseapp.com",
   databaseURL: "https://swapmeet-4848e.firebaseio.com",
