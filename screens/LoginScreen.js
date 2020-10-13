@@ -1,7 +1,8 @@
 import * as Google from 'expo-google-app-auth'
 import React from 'react'
-import { StyleSheet, View, Text  } from 'react-native'
+import { View  } from 'react-native'
 import { FontAwesome } from '@expo/vector-icons'
+import * as AppAuth from 'expo-app-auth'
 import AppStyles from '../AppStyles'
 import firebase from '../dbConfig'
 
@@ -50,6 +51,7 @@ export default function LoginScreen({ navigation }) {
         androidClientId: process.env.EXPO_GOOGLE_AUTH_ANDROID_ID,
         iosClientId: process.env.EXPO_GOOGLE_AUTH_IOS_ID,
         scopes: ['profile', 'email'],
+        redirectUrl: `${AppAuth.OAuthRedirect}:/oauth2redirect/google`
       })
       if (result.type === 'success') onSignIn(result)
       else console.log('cancelled')
