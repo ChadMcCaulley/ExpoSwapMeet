@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 export default {
   "expo": {
     "name": "SwapMeet",
@@ -20,7 +22,7 @@ export default {
       "permissions": ["expo-location"],
       "config": {
         "googleMaps": {
-            "apiKey": process.env.GOOGLE_MAPS_API_KEY
+            "apiKey": process.env.EXPO_GOOGLE_MAPS_API_KEY
         }
       }
     },
@@ -33,7 +35,7 @@ export default {
         ]
       },
       "config": {
-        "googleMapsApiKey": process.env.GOOGLE_MAPS_API_KEY
+        "googleMapsApiKey": process.env.EXPO_GOOGLE_MAPS_API_KEY
       }
     },
     "web": {
